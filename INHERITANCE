@@ -1,0 +1,64 @@
+class Transport:
+
+    def __init__(self, speed, color): 
+
+        self.speed = speed 
+
+        self.color = color 
+
+    def beep(self): 
+
+        print("BEEEEEEP") 
+
+    def say_speed(self): 
+
+        print(f"Speed: {self.speed}") 
+
+    def say_color(self): 
+
+        print(f"Color: {self.color}") 
+
+
+
+class Car(Transport): 
+
+    def __init__(self, speed, color, owner):
+
+        super().__init__(speed, color) 
+
+        self.owner = owner 
+
+        self.wheels = 4 
+    def say_owner(self): 
+
+        print("Owner is " + self.owner+ ". she has a car with " + str(self.wheels) + " wheels")
+
+porshe = Car(120, "black", "Sophia") 
+
+porshe.say_owner() 
+
+porshe.beep() 
+
+
+# Example 2 (Bus)
+class Bus(Transport):
+    def __init__(self, speed, color, seats):
+
+        super().__init__(speed, color)
+        self.seats = seats
+        self.wheels = 8 
+    def say_owner(self):
+
+        print("No owner") 
+
+    def say_wheels(self):
+
+        print(f"The number of wheels on a bus is {self.wheels}") 
+    
+bus1 = Bus(60, "yellow", 36)
+
+bus1.say_color() 
+
+bus1.say_owner()
+
+bus1.say_wheels()

@@ -1,0 +1,79 @@
+""" Classes are like games, there are are weapons, cars, players and they each have characteristics and abilities.
+    In programming, there are classes to describe such things listed above.
+    A class is a data type, just like string or a number, which have their own properties
+    (for example, a string has length - number of characters) and their own abilities (numbers can add, multiply, etc.).
+
+    - In classes, properties are described as variables and abilities, actions are described as functions.
+    - For example, we have a class of car, the car has speed and color (variables) and can honk (function). 
+    - functions in a class are called methods.
+    -  “__init__” function is called a constructor,
+      it is called by itself when the class object is created.
+    - Note that class names are capitalized.
+"""
+# Create a car class
+class Car:
+    def __init__(self, speed, color): 
+
+        self.speed = speed 
+
+        self.color = color 
+
+    def beep(self): #“self” points to the car object itself (it can be any object given).
+
+        print("BEEEEEEP") 
+    def say_speed(self): 
+
+        print(f"Speed: {self.speed}") 
+    def say_color(self): 
+
+        print(f"Сolor: {self.color}") 
+
+# create a 1st car variable and instantiate it to "Car" class
+porshe = Car(120, "black") # The "porshe" variable is an object/instance of "Car" class
+
+porshe.beep() 
+
+
+# create a 2nd car variable and instantiate it to "Car" class
+bmw = Car(110, "red") 
+
+bmw.beep() 
+
+
+# make each cars report the speed it has
+bmw.say_speed() 
+
+# make each cars report the color it has
+porshe.say_color() 
+
+# EXAMPLE 2
+class Person: 
+
+    def __init__(self, name, age): 
+
+        self.name = name 
+
+        self.age = age 
+
+    def say_name(self): 
+
+        print(f"My name is {self.name}") 
+
+    def say_age(self): 
+
+        print(f"I am {self.age} years old") 
+
+person1 = Person("Tom", 15) 
+
+person1.say_name() 
+
+person1.say_age() 
+
+person2 = Person("Mary", 13) 
+
+person2.say_name() 
+
+person2.say_age()  
+
+
+
